@@ -369,7 +369,7 @@ namespace Microsoft.AspNet.OData.Builder
             {
                 foreach (StructuralTypeConfiguration structuralType in typesToLift)
                 {
-                    PropertyConfiguration derivedPropertyToRemove = structuralType.Properties.SingleOrDefault(
+                    PropertyConfiguration derivedPropertyToRemove = structuralType.Properties.FirstOrDefault(
                         p => p.PropertyInfo.Name == property.PropertyInfo.Name);
                     if (derivedPropertyToRemove != null)
                     {
